@@ -39,7 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 A minimalist, high-performance personal portfolio and resume website built with Next.js, TypeScript, and Tailwind CSS. The architecture is designed to be easily maintained, visually clean, and fully responsive across all devices.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 * **Framework:** [Next.js](https://nextjs.org/) (App Router)
 * **Language:** TypeScript
@@ -48,7 +48,7 @@ A minimalist, high-performance personal portfolio and resume website built with 
 * **Components:** React (Client & Server Components)
 * **Integrations:** GitHub CLI, `react-github-calendar`
 
-## ✨ Key Features
+## Key Features
 
 * **Minimalist Glassmorphism UI:** A custom-built, responsive interface featuring a subtle 80% to 10% opacity gradient background with frosted glass (`backdrop-blur`) component cards.
 * **Interactive Specialization Carousel:** A lightweight, highly performant horizontal scroll carousel built natively with CSS Scroll Snap.
@@ -56,7 +56,7 @@ A minimalist, high-performance personal portfolio and resume website built with 
 * **Responsive Navigation:** A sticky header that seamlessly transitions into a mobile-friendly hamburger dropdown menu on smaller screens.
 * **Dedicated Resume Page:** A clean, typographic timeline layout detailing professional experience across full-stack development, network engineering, and cybersecurity instruction.
 
-## 🛠️ Getting Started
+## Getting Started
 
 To run this project locally, follow these steps.
 

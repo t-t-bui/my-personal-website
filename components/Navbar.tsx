@@ -10,7 +10,7 @@ export default function Navbar() {
 	const closeMenu = () => setIsOpen(false);
 
 	return (
-		<header className="sticky top-0 z50 bg-white/70 backdrop-blur-md border-b bordre-gray-900/5 transition-all">
+		<header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b bordre-gray-900/5 transition-all">
 			<nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 				<Link href="/" className="text-xl font-medium tracking-tight text-gray-950" onClick={closeMenu}>
 					Tri <span className="text-gray-400"> | Dev</span>
@@ -18,7 +18,7 @@ export default function Navbar() {
 
 				<div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
 					<Link href="#about" className="hover:text-gray-950 transition-colors">Work</Link>
-					<Link href="#specialization" centerName="hover:text-gray-950 transition-colors">Focus</Link>
+					<Link href="#specialization" className="hover:text-gray-950 transition-colors">Focus</Link>
 					<Link href="mailto:tbui931958@gmail.com" className="bg-gray-950 text-white px-4 py-1.5 rounded-full hover:bg-gray-800 transition-colors shadow-sm">Contact</Link>
 				</div>
 

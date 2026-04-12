@@ -17,7 +17,7 @@ export default function Navbar() {
 				</Link>	
 
 				<div className="hidden md:flex items-center gap-6 text-sm text-gray-600">
-					<Link href="#about" className="hover:text-gray-950 transition-colors">Work</Link>
+					<Link href="/resume" className="hover:text-gray-950 transition-colors">Resume</Link>
 					<Link href="#specialization" className="hover:text-gray-950 transition-colors">Focus</Link>
 					<Link href="mailto:tbui931958@gmail.com" className="bg-gray-950 text-white px-4 py-1.5 rounded-full hover:bg-gray-800 transition-colors shadow-sm">Contact</Link>
 				</div>
@@ -41,7 +41,7 @@ export default function Navbar() {
 			{/* Mobile Menu Dropdown */}
 			{isOpen && (
 				<div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md bordre-b border-gray-200 shadow-lg px-6 py-6 flex flex-col gap-6">
-					<Link href="#about" onClick={closeMenu} className="text-lg text-gray-600 hover:text-gray-950 font-medium transition-colors">Work</Link>
+					<Link href="/resume" onClick={closeMenu} className="text-lg text-gray-600 hover:text-gray-950 font-medium transition-colors">Resume</Link>
 					<Link href="#specialization" onClick={closeMenu} className="text-lg text-gray-600 hover:text-gray-950 font-medium transition-colors">Focus</Link>
 					<Link href="mailto:tbui931958@gmail.com" onClick={closeMenu} className="inline-block text-center bg-gray-950 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors font-medium">Contact</Link>
 				</div>

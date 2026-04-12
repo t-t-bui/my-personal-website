@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import GithubActivity from '@/components/GithubActivity';
 import Navbar from '@/components/Navbar';
+import Carousel from '@/components/Carousel';
 
 export const dynamic = 'force-dynamic'; // Ensures page fetches fresh data
 
@@ -21,11 +22,7 @@ async function getProjects() {
 
 export default async function Home() {
   const projects = await getProjects();
-  const specializedAreas = [
-    { title: 'Digital Architecture', description: 'Systems designed for elegant scalability.'},
-    { title: 'User-Centric Design', description: 'Interfaces that prioritize intuition and clarity.'},
-    { title: 'Technical Strategy', description: 'Aligning code structure with long-term goals.'},
-  ];
+
 
   return (
     <div className="relative min-h-screen bg-white text-gray-950 font-sans">
@@ -38,10 +35,14 @@ export default async function Home() {
         <section className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tighter leading-tight text-gray-950">
-              Building simple interfaces for <span className="text-gray-400">complex ideas.</span>
+              Learning new stacks and journey to become a <span className="text-gray-400">Networks Engineer.</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-lg">
-              I specialized in full-stack Next.js applications, creafting clean codebase that balance performance with exceptional uer experience.
+             Teacher by day, helping students navigate complex ideas and build strong foundations. Beyond the classroom, Learner of clean code and elegant design—focused on creating systems that balance performance, clarity, and real-world usability.
+             By night, I’m diving deeper into cybersecurity and network engineering, working toward building secure, resilient systems that protect and empower the people who rely on them.
+            </p>
+            <p className="text-lg text-gray-600 max-w-lg">
+             -Always learning. Always building. Always improving.
             </p>
             <div className="flex item-center gap-4 pt-4">
               <Link href="#specialization" className="text-sm font-medium border-b-2 border-gray-950 pb-1">
@@ -70,21 +71,11 @@ export default async function Home() {
           <div className="max-w-xl space-y-3">
             <p className="text-sm font-semibold uppercase trackig-widest text-gray-400">Core Focus</p>
             <h2 className="text-4xl font-semibold tracking-tight text-gray-950">
-              Structured thinking, applied to code.
+              Structured thinking, applied to all aspect.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {specializedAreas.map((area, index)=>(
-              <div key={index} className="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:border-gray-200/50 transition-colors space-y-3">
-                <div className="w-10 h-10 rounded-full bg-gray-950 text-white flex items-center justify-center font-mono text-lg shadow-sm">
-                  0{index+1}
-                </div>
-                <h3 className="text-xl font-medium pt-3 text-gray-950">{area.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{area.description}</p>
-              </div>
-                ))}
-          </div>
+          <Carousel />
         </section>
 
         <section id="activity" className="pb-24 space-y-12">

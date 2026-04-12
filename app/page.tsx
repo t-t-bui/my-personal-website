@@ -71,7 +71,7 @@ export default async function Home() {
           <div className="max-w-xl space-y-3">
             <p className="text-sm font-semibold uppercase trackig-widest text-gray-400">Core Focus</p>
             <h2 className="text-4xl font-semibold tracking-tight text-gray-950">
-              Structured thinking, applied to all aspect.
+              Structured thinking, applied to all aspect of daily life.
             </h2>
           </div>
 

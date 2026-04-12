@@ -15,7 +15,7 @@ export default function Carousel() {
   const scroll = (direction: 'left' | 'right') => {
   	if(scrollContainerRef.current) {
   		// adjust the scroll distance based on your perferred slide width
-  		const scrollAmount = direction == 'left' ? -350 : 350;
+  		const scrollAmount = direction === 'left' ? -350 : 350;
   		scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   	}
   };
@@ -33,7 +33,7 @@ export default function Carousel() {
 	  			</svg>
 	  		</button>
 	  		<button
-	  			onClick={() => scroll('left')}
+	  			onClick={() => scroll('right')}
 	  			className="p-3 rounded-full bg-white/60 backdrop-blur-md border border-gray-200/50 hover:border-gray-400 hover:text-gray-950 text-gray-500 transition-colors shadow-sm focus:outline-none"
 	  			aria-label="Scroll Right"
 	  		>

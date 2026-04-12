@@ -1,7 +1,12 @@
 'use client';
 
-import { GitHubCalendar } from 'react-github-calendar'; 
+import dynamic from 'next/dynamic';
 
+import { GitHubCalendar } from 'react-github-calendar'; 
+// const GitHubCalendar = dynamic(() => import('react-github-calendar'), {
+// 	ssr: false,
+// 	loading: () => <p>Loading calendar...</p>,
+// })
 
 export default function GithubActivity({ username } : { username: string }) {
 	const monochromeTheme = {
@@ -19,6 +24,7 @@ export default function GithubActivity({ username } : { username: string }) {
 				fontSize={14}
 				blockMargin={4}
 				blockSize={12}
+				suppressHydrationWarning
 			/>
 		</div>
 	);

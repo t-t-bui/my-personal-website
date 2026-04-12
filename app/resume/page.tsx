@@ -22,6 +22,10 @@ export default function Resume() {
 							Dallas Based
 						</span>
 					</div>
+
+					<div className="flex flex-wrap gap-4 text-sm font-large font-semibold pt-32">
+						<h1 className="text-6xl tracking-tighter mb-4">TODO: Temporary unavailable. Resume upon request.</h1>
+					</div>
 				</header>
 			</main>
 		</div>

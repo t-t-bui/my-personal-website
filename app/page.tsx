@@ -35,7 +35,7 @@ export default async function Home() {
         <section className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tighter leading-tight text-gray-950">
-              Learning new stacks and journey to become a <span className="text-gray-400">Networks Engineer.</span>
+              Learning new stacks and journey to become a <span className="text-gray-400">Networks Engineer</span> or <span className="text-gray-400">Cyber Expert.</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-lg">
              Teacher by day, helping students navigate complex ideas and build strong foundations. Beyond the classroom, Learner of clean code and elegant design—focused on creating systems that balance performance, clarity, and real-world usability.

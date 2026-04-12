@@ -20,7 +20,7 @@ export default function GithubActivity({ username } : { username: string }) {
 				username={username}
 				theme={monochromeTheme}
 				colorScheme="light"
-				hideColorLegend={true}
+				//hideColorLegend={true}
 				fontSize={14}
 				blockMargin={4}
 				blockSize={12}

@@ -56,14 +56,4 @@ A minimalist, high-performance personal portfolio and resume website built with 
 * **Responsive Navigation:** A sticky header that seamlessly transitions into a mobile-friendly hamburger dropdown menu on smaller screens.
 * **Dedicated Resume Page:** A clean, typographic timeline layout detailing professional experience across full-stack development, network engineering, and cybersecurity instruction.
 
-## Getting Started
 
-To run this project locally, follow these steps.
-
-### Prerequisites
-Make sure you have Node.js installed and a MongoDB Atlas cluster available.
-
-### 1. Clone the repository
-```bash
-git clone [https://github.com/your-github-username/my-personal-website.git](https://github.com/your-github-username/my-personal-website.git)
-cd my-personal-website

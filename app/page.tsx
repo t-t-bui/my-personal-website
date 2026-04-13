@@ -86,7 +86,7 @@ export default async function Home() {
             </h2>
           </div>
 
-          <GithubActivity username="t-t-bui" />
+          <GithubActivity username="t-t-bui" suppressHydrationWarning/>
         </section>
 
         <footer id="contact" className="border-t border-gray-100 pt-16 pb-12 mt-20 text-center space-y-8">

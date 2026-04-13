@@ -24,7 +24,6 @@ export default function GithubActivity({ username } : { username: string }) {
 				fontSize={14}
 				blockMargin={4}
 				blockSize={12}
-				suppressHydrationWarning
 			/>
 		</div>
 	);

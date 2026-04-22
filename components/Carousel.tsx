@@ -13,10 +13,14 @@ export default function Carousel() {
   ];
 
   const scroll = (direction: 'left' | 'right') => {
+  	const currentWidth = document.documentElement.clientWidth;
+  	console.log(currentWidth);
   	if(scrollContainerRef.current) {
   		// adjust the scroll distance based on your perferred slide width
-  		const scrollAmount = direction === 'left' ? -350 : 350;
-  		scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  		const container = scrollContainerRef.current;
+  		const scrollAmount = container.clientWidth * 0.8;
+
+  		container.scrollBy({ left: direction == 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
   	}
   };
 

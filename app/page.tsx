@@ -1,19 +1,20 @@
 // app/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-
 import GithubActivity from '@/components/GithubActivity';
 import Navbar from '@/components/Navbar';
 import Carousel from '@/components/Carousel';
 
-export const dynamic = 'force-dynamic'; // Ensures page fetches fresh data
-
 async function getProjects() {
-  // In a real app, use absolute URL like process.env.NEXT_PUBLIC_API_URL
-  const res = await fetch('http://localhost:3000/api/projects', {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL
+    ?? (process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000');
+
+  const res = await fetch(`${baseUrl}/api/projects`, {
     cache: 'no-store',
   });
-  
+
   if (!res.ok) {
     return [];
   }
@@ -22,7 +23,6 @@ async function getProjects() {
 
 export default async function Home() {
   const projects = await getProjects();
-
 
   return (
     <div className="relative min-h-screen bg-white text-gray-950 font-sans">
@@ -39,7 +39,7 @@ export default async function Home() {
             </h1>
             <p className="text-lg text-gray-600 max-w-lg">
              Teacher by day, helping students navigate complex ideas and build strong foundations. Beyond the classroom, Learner of clean code and elegant design—focused on creating systems that balance performance, clarity, and real-world usability.
-             By night, I’m diving deeper into cybersecurity and network engineering, working toward building secure, resilient systems that protect and empower the people who rely on them.
+             By night, I'm diving deeper into cybersecurity and network engineering, working toward building secure, resilient systems that protect and empower the people who rely on them.
             </p>
             <p className="text-lg text-gray-600 max-w-lg">
              -Always learning. Always building. Always improving.

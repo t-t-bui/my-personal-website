@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const workExperience = [
 	{
@@ -170,6 +171,8 @@ export default function Resume() {
 					</div>
 				</div>
 			)}
+
+			<Footer />
 		</div>
 	);
 }

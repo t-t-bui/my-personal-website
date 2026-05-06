@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState, useCallback, useEffect } from 'react';
 
 export default function Carousel() {
 	const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -9,8 +9,33 @@ export default function Carousel() {
     { title: 'Full-Stack Developer', description: 'Systems designed for elegant scalability.'},
     { title: 'Cybersecurity Analyst', description: 'Purple Team focus for Privacy and Data Security.'},
     { title: 'Network Engineer', description: 'Builidng relibility with technical capabilities.'},
-    { title: 'CTE Teacher', description: 'Guiding the future of tomorrow.'}
+    { title: 'Career and Technology Education Teacher', description: 'Guiding the future of tomorrow.', alt: 'CTE Teacher'}
   ];
+
+	const useMediaQuery = (width: number) => {
+		const [targetReached, setTargetReached] = useState(false);
+
+		const updateTarget = useCallback((e: MediaQueryListEvent) => {
+			if (e.matches) {
+				setTargetReached(true);
+			} else {
+				setTargetReached(false);
+			}
+		}, []);
+
+		useEffect(() => {
+			const media = window.matchMedia(`(max-width: ${width}px)`);
+			media.addEventListener("change", updateTarget);
+
+			if (media.matches) {
+				setTargetReached(true);
+			}
+
+			return () => media.removeEventListener("change", updateTarget);
+		}, []);
+
+		return targetReached;
+	};
 
   const scroll = (direction: 'left' | 'right') => {
   	const currentWidth = document.documentElement.clientWidth;
@@ -24,6 +49,7 @@ export default function Carousel() {
   	}
   };
 
+  const isBreakpoint = useMediaQuery(768);
   return (
   	<div className="relative w-full">
   		<div className="flex justify-end gap-3 mb-8">
@@ -49,17 +75,17 @@ export default function Carousel() {
 
 	  	<div 
 	  		ref={scrollContainerRef}
-	  		className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+	  		className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
 	  	>
 	  		{specializedAreas.map((area, index) => (
 	  			<div 
 	  				key={index}
 	  				className="min-w-[85%] md:min-w[380px] snap-start shrink-0 bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-gray-200/50 shadow-sm transition-all hover:border-gray-300 space-y-3"
 	  			>
-	  				<div className="w-10 h-10 rounded-full bg-gray-950 text-white flex items-center justify-center font-mono text-lg shadow-sm">
+	  				<div className="w-10 h-10 text-wrap rounded-full bg-gray-950 text-white flex items-center justify-center font-mono text-lg shadow-sm">
 	  					0{index + 1}
 	  				</div>
-	  				<h3 className="text-xl font-medium pt-3 text-gray-950">{area.title}</h3>
+	  				{ isBreakpoint ? (<h3 className="text-xl font-medium pt-3 text-gray-950">{area.alt}</h3>) : (<h3 className="text-xl font-medium pt-3 text-gray-950">{area.title}</h3>) }
 	  				<p className="text-gray-600 text-sm leading-relaxed">{area.description}</p>
 	  			</div>
 	  		))}

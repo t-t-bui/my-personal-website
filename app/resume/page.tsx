@@ -78,27 +78,39 @@ export default function Resume() {
 			{/*<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-100/90 to-gray-500/50"/>*/}
 			<div className="fixed inset-0 -z-20 bg-gray-50"/>
 			<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-200/80 to-transparent opacity-80" />
+			
 			<Navbar />
-			<main className="relative z-10 pt-32 pb-20 px-6">
-				<div className="max-w-4xl mx-auto">
-					<header className="mb-20">
-						<h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-gray-950">Tri Bui</h1>
-						<p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
-							Network Engineer & Full-Stack Developer enhancing organizational infrastructure through secure architecture, optimization, and technical instruction.
-						</p>
 
-						<div className="flex flex-wrap gap-3 text-sm font-medium">
-							<Link href="mailto:tbui931958@gmail.com" className="bg-white/80 backdrop-blur-md border border-gray-200 px-5 py-2.5 rounded-full hover:border-gray-400 hover:shadow-sm transition-all text-gray-700">
-								tbui931958@gmail.company
-							</Link>
-							<span className="bg-white/80 backdrop-blur-md border border-gray-200 px-5 py-2.5 rounded-full text-gray-700">
-								Dallas Based
-							</span>
-							<span className="bg-white/80 backdrop-blur-md border border-gray-200 px-5 py-2.5 rounded-full text-gray-700">
-								(469) 348-3107
-							</span> 
+			<main className="relative z-10 pt-32 pb-20 px-6">
+				<div className="grid grid-cols-1 gap-6">
+					<div className="max-w-4xl mx-auto">
+						<header className="mb-20">
+							<h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-gray-950">Tri Bui</h1>
+							<p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
+								Network Engineer & Full-Stack Developer enhancing organizational infrastructure through secure architecture, optimization, and technical instruction.
+							</p>
+
+							<div className="flex flex-wrap gap-3 text-sm font-medium">
+								<Link href="mailto:tbui931958@gmail.com" className="bg-white/80 backdrop-blur-md border border-gray-200 px-5 py-2.5 rounded-full hover:border-gray-400 hover:shadow-sm transition-all text-gray-700">
+									tbui931958@gmail.company
+								</Link>
+								<span className="bg-white/80 backdrop-blur-md border border-gray-200 px-5 py-2.5 rounded-full text-gray-700">
+									Dallas Based
+								</span>
+								<span className="bg-white/80 backdrop-blur-md border border-gray-200 px-5 py-2.5 rounded-full text-gray-700">
+									(469) 348-3107
+								</span> 
+							</div>
+						</header>
+					</div>
+
+					<div className="max-w-4xl mx-auto">
+						<div className="mb-20 mt-5">
+							<p className="text-xl md:text-2xl text-gray-800/60 mb-8 max-w-3xl leading-relaxed">
+								A former software developer. Current mission is to get back on my feet and start developing again, or at least attempt to do something new. My lastest achievement is the start of my home lab using a few Pis as the foundation and trying to PR lap times in sim racing as a distraction as I continue to study and muster the courage and commitmemnt to take the JNCIA and CCNA exams.
+							</p>
 						</div>
-					</header>
+					</div>
 				</div>
 			</main>
 

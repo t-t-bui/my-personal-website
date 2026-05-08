@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+
 import { useState, useEffect } from 'react';
 
 import Navbar from '@/components/Navbar';
@@ -76,8 +78,16 @@ export default function Resume() {
 	return (
 		<div className="relative min-h-screen bg-white text-gray-950 font-sans selection:bg-gray-200 pb-32">
 			{/*<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-100/90 to-gray-500/50"/>*/}
-			<div className="fixed inset-0 -z-20 bg-gray-50"/>
-			<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-200/80 to-transparent opacity-80" />
+			<div className="fixed inset-0 -z-0 bg-gray-50">
+				<Image
+					src="/images/stary-sky.png"
+					alt="abstract image of night sky"
+					fill
+					priority
+					className="object-cover object-center"
+				/>
+			</div>
+			<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-200/70 to-transparent opacity-80" />
 			
 			<Navbar />
 
@@ -85,8 +95,8 @@ export default function Resume() {
 				<div className="grid grid-cols-1 gap-6">
 					<div className="max-w-4xl mx-auto">
 						<header className="mb-20">
-							<h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-gray-950">Tri Bui</h1>
-							<p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl leading-relaxed">
+							<h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-white">Tri Bui</h1>
+							<p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl leading-relaxed">
 								Network Engineer & Full-Stack Developer enhancing organizational infrastructure through secure architecture, optimization, and technical instruction.
 							</p>
 
@@ -106,7 +116,7 @@ export default function Resume() {
 
 					<div className="max-w-4xl mx-auto">
 						<div className="mb-20 mt-5">
-							<p className="text-xl md:text-2xl text-gray-800/60 mb-8 max-w-3xl leading-relaxed">
+							<p className="text-xl md:text-2xl text-gray-100/60 mb-8 max-w-3xl leading-relaxed">
 								A former software developer. Current mission is to get back on my feet and start developing again, or at least attempt to do something new. My lastest achievement is the start of my home lab using a few Pis as the foundation and trying to PR lap times in sim racing as a distraction as I continue to study and muster the courage and commitmemnt to take the JNCIA and CCNA exams.
 							</p>
 						</div>

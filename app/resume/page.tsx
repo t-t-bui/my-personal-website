@@ -78,7 +78,7 @@ export default function Resume() {
 	return (
 		<div className="relative min-h-screen bg-white text-gray-950 font-sans selection:bg-gray-200 pb-32">
 			{/*<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-100/90 to-gray-500/50"/>*/}
-			<div className="fixed inset-0 -z-0 bg-gray-50">
+			{/*<div className="fixed inset-0 -z-0 bg-gray-50">
 				<Image
 					src="/images/stary-sky.png"
 					alt="abstract image of night sky"
@@ -86,8 +86,9 @@ export default function Resume() {
 					priority
 					className="object-cover object-center"
 				/>
-			</div>
-			<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-200/70 to-transparent opacity-80" />
+			</div>*/}
+			<div className="fixed inset-0 -z-0 bg-gray-50"/>
+			<div className="fixed inset-0 -z-10 bg-gradient-to-br from-gray-800/40 to-transparent opacity-50" />
 			
 			<Navbar />
 

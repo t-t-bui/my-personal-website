@@ -96,7 +96,7 @@ export default function Resume() {
 				<div className="grid grid-cols-1 gap-6">
 					<div className="max-w-4xl mx-auto">
 						<header className="mb-20">
-							<h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-white">Tri Bui</h1>
+							<h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-gray-700">Tri Bui</h1>
 							<p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl leading-relaxed">
 								Network Engineer & Full-Stack Developer enhancing organizational infrastructure through secure architecture, optimization, and technical instruction.
 							</p>
@@ -117,7 +117,7 @@ export default function Resume() {
 
 					<div className="max-w-4xl mx-auto">
 						<div className="mb-20 mt-5">
-							<p className="text-xl md:text-2xl text-gray-100/60 mb-8 max-w-3xl leading-relaxed">
+							<p className="text-xl md:text-2xl text-gray-500/60 mb-8 max-w-3xl leading-relaxed">
 								A former software developer. Current mission is to get back on my feet and start developing again, or at least attempt to do something new. My lastest achievement is the start of my home lab using a few Pis as the foundation and trying to PR lap times in sim racing as a distraction as I continue to study and muster the courage and commitmemnt to take the JNCIA and CCNA exams.
 							</p>
 						</div>

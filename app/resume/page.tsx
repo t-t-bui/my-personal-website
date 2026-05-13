@@ -143,7 +143,7 @@ export default function Resume() {
 								<div>
 									<span className="text-xs font-mono text-gray-500 mb-4 block">{job.date}</span>
 									<h3 className="text-2xl font-medium text-gray-950 leading-tight mb-2 group-hover:text-gray-700 transition-colors">{job.role}</h3>
-									<p className="text-gray-600 font-medium">{job.compnay}</p>
+									<p className="text-gray-600 font-medium">{job.company}</p>
 								</div>
 								<div className="flex items-center justify-between w-full mt-6">
 									<span className="text-sm text-gray-500">{job.summary}</span>

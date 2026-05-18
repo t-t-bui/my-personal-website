@@ -169,7 +169,7 @@ export default function Resume() {
 						<div className="sticky top-0 bg-white/90 backdrop-blur-md broder-b border-gray-100 p-6 flex justify-between items-start z-10">
 							<div>
 								<h3 className="text-2xl font-semibold text-gray-950 mb-1">{activeJob.role}</h3>
-								<p className="text-gray-600 font-medium">{activeJob.compnay} &bull; <span className="font-mono text-sm text-gray-500">{activeJob.date}</span></p>
+								<p className="text-gray-600 font-medium">{activeJob.company} &bull; <span className="font-mono text-sm text-gray-500">{activeJob.date}</span></p>
 							</div>
 							<button 
 								onClick={() => setActiveJob(null)}
